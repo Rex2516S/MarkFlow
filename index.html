@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarkFlow - by kyle_A_10000</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              studio: {
+                bg: '#131314',      // Deepest background
+                panel: '#1E1F20',   // Sidebar/Card background
+                border: '#444746',  // Subtle borders
+                hover: '#333537',   // Hover state
+                primary: '#A8C7FA', // Light blue text/accent
+                text: '#E3E3E3',    // Primary text
+                dim: '#C4C7C5',     // Secondary text
+                blue: '#0B57D0',    // Primary Action Blue
+                blueHover: '#0842A0',
+                purple: '#A142F4', // Gemini Accent
+              }
+            },
+            typography: (theme) => ({
+              DEFAULT: {
+                css: {
+                  color: theme('colors.studio.text'),
+                  '--tw-prose-headings': theme('colors.studio.text'),
+                  '--tw-prose-links': theme('colors.studio.primary'),
+                  '--tw-prose-code': theme('colors.studio.primary'),
+                  '--tw-prose-pre-bg': theme('colors.studio.panel'),
+                  '--tw-prose-pre-code': theme('colors.studio.text'),
+                },
+              },
+            }),
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #131314;
+        color: #E3E3E3;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #131314; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #444746; 
+        border-radius: 5px;
+        border: 2px solid #131314;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #5E5E5E; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-markdown": "https://esm.sh/react-markdown@9.0.1?bundle"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "MarkFlow - Low-Code Markdown Builder",
+  "description": "A visual, low-code interface to generate clean Markdown files. Features drag-and-drop block construction, live preview.",
+  "requestFramePermissions": []
+}
